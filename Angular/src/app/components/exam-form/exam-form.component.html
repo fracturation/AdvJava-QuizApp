@@ -1,0 +1,32 @@
+<div class="container">
+        <h1>Create an exam here</h1>
+        <form #examForm="ngForm" autocomplete="off">
+          <div class="form-group">
+            <input type="text" class="form-control" id="content" placeholder="Exam title here" [readonly]="isSaved"
+                    required
+                    [(ngModel)]="exam.title" name="title"
+                    #form="ngModel">
+            <div [hidden]="form.valid || form.pristine" 
+                 class="alert alert-danger">
+                 Please give the exam a title before submitting
+            </div>
+          </div>
+    
+          <button id="submitbutton" type="submit" class="btn btn-success" (click)="save()" [disabled]="!examForm.form.valid || isSaved">Add</button>
+          <button id="submitbutton" type="submit" class="btn btn-success" (click)="save()" [disabled]="!examForm.form.valid || exam.questions.length == 0">Submit</button>
+        </form>
+</div>
+
+<div id="result">
+        <ol>
+            <li *ngFor="let question of exam.questions">
+              {{ question.content }}
+            </li>
+        </ol>
+        </div>
+
+<app-question-list *ngIf="isSaved" (questionEvent)="questionEventHandler($event)"></app-question-list>
+
+<div *ngIf="isSaved"><h2>OR</h2></div>
+
+<app-question-form *ngIf="isSaved" (questionEvent)="questionEventHandler($event)"></app-question-form>

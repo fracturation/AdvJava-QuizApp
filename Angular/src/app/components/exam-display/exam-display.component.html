@@ -1,0 +1,16 @@
+<h2>{{ exam.title }}</h2>
+
+<div id="questions">
+        <ol>
+            <li *ngFor="let question of questions">
+              {{ question.content }} {{ getMCQChoices(question) }}
+              <ol>
+                  <li *ngFor="let choice of choices">
+                      {{ choice.choice }}
+                      <input type="checkbox" id="validity" (change)="addAnswer($event, choice)" name="valid" [readonly]="isSubmitted">
+                  </li>
+              </ol>
+            </li>
+        </ol>
+        <button id="submitAnswers" type="submit" class="btn btn-success" (click)="saveAnswers()">Submit</button>
+</div>

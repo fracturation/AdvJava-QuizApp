@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Quiz-Core/quiz-core.iml" filepath="$PROJECT_DIR$/Quiz-Core/quiz-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Quiz-Core/quiz-parent/quiz-parent.iml" filepath="$PROJECT_DIR$/Quiz-Core/quiz-parent/quiz-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Quiz-Rest-API/quiz-rest-api.iml" filepath="$PROJECT_DIR$/Quiz-Rest-API/quiz-rest-api.iml" />
+    </modules>
+  </component>
+</project>

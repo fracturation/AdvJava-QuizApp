@@ -1,0 +1,15 @@
+<div class="container">
+        <h2>Search for an assessment below</h2>
+        <div>
+        <input [(ngModel)]="searchText" name="searchText" id="searchbox" placeholder="Search through the exam catalogue">
+        </div>
+        <button id="searchbutton" class="btn btn-success" (click)="search()">Search</button>
+        <div id="result">
+        <ol>
+            <li *ngFor="let exam of examList">
+              {{ exam.title }}
+              <button id="addbutton" type="button" class="btn btn-success" (click)="addToMCQAnswer(exam)"><a routerLink="/exam" routerLinkActive="active">Select</a></button>
+            </li>
+        </ol>
+        </div>
+    </div>

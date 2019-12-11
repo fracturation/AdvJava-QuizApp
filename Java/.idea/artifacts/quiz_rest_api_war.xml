@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="quiz-rest-api:war">
+    <output-path>$PROJECT_DIR$/Quiz-Rest-API/target</output-path>
+    <root id="archive" name="quiz-rest-api-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="quiz-rest-api:war exploded" />
+    </root>
+  </artifact>
+</component>

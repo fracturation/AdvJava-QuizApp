@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>Add a new question</h1>
+    <form #questionForm="ngForm" autocomplete="off">
+      <div class="form-group">
+        <input type="text" class="form-control" id="content" placeholder="Question content here" [readonly]="isQuSaved"
+                required
+                [(ngModel)]="question.content" name="content"
+                #form="ngModel">
+        <div [hidden]="form.valid || form.pristine" 
+             class="alert alert-danger">
+             Please fill in the content of the question before submitting
+        </div>
+      </div>
+
+      <button id="submitbutton" type="submit" class="btn btn-success" (click)="save()" [disabled]="!questionForm.form.valid || isQuSaved">Save</button>
+
+    </form>
+</div>
+
+<app-mcqchoice-form *ngIf="isQuSaved" [quFromParent]="question"></app-mcqchoice-form>
+
+<div *ngIf="isQuSaved"><button id="submitbutton" type="submit" class="btn btn-success" (click)="addToExam(); questionForm.reset()">Done</button></div>

@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Find questions to add to your exam</h1>
+    <div>
+    <input [(ngModel)]="searchText" name="searchText" id="searchbox" placeholder="Search through existing questions">
+    </div>
+    <button id="searchbutton" class="btn btn-success" (click)="search()">Search</button>
+    <div id="result">
+    <ol>
+        <li *ngFor="let question of questionList">
+          {{ question.content }}
+          <button id="addbutton" type="button" class="btn btn-success" (click)="addToExam(question)">Add to exam</button>
+        </li>
+    </ol>
+    </div>
+</div>

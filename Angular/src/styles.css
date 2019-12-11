@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+	color: white;
+	margin-bottom: 10%;
+	background-image: url('../img/005.jpg');
+    background-repeat: no-repeat;
+    
+}
+
+* {
+	font-family: "Kodchasan", sans-serif;
+}

@@ -1,0 +1,30 @@
+#login {
+	font-size: 1.2em;
+	font-weight: 500;
+	color: aliceblue;
+	background-color: rgba(0,0,0,0.70);
+	min-width: 90px;
+	min-height: 90px;
+}
+
+#signup {
+	font-size: 1.2em;
+	font-weight: 500;
+	color: aliceblue;
+	background-color: rgba(0,0,0,0.70);
+	min-width: 90px;
+	min-height: 90px;
+}
+
+#or {
+	font-size: 1.2em;
+	font-weight: 500;
+	color: aliceblue;
+	background-color: rgba(0,0,0,0.70);
+	min-width: 90px;
+	min-height: 90px;
+}
+
+a[ng-reflect-router-link-active] {
+    color: aliceblue;
+}

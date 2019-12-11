@@ -1,0 +1,29 @@
+<div class="container">
+        <h2>Log in</h2>
+        <form #loginForm="ngForm" autocomplete="off">
+          <div class="form-group">
+            <input type="text" class="form-control" id="content" placeholder="Full name here"
+                    required
+                    [(ngModel)]="user.name" name="name"
+                    #form="ngModel">
+            <div [hidden]="form.valid || form.pristine" 
+                 class="alert alert-danger">
+                 Both name and password fields must be completed in order to login
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input type="password" class="form-control" id="content" placeholder="Password"
+                    required
+                    [(ngModel)]="user.password" name="password"
+                    #form="ngModel">
+            <div [hidden]="form.valid || form.pristine" 
+                 class="alert alert-danger">
+                 Both name and password fields must be completed in order to login
+            </div>
+          </div>
+    
+          <button id="submitbutton" type="submit" class="btn btn-success" (click)="login(); loginForm.reset()" [disabled]="!loginForm.form.valid"><a routerLink="/examination-center" routerLinkActive="my-css-class">Login</a></button>
+    
+        </form>
+    </div>

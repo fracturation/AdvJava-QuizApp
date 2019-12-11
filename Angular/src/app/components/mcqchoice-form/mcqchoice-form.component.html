@@ -1,0 +1,28 @@
+<div id="result">
+        <ol>
+            <li *ngFor="let choice of choicesList">
+              {{ choice.choice }} {{ choice.valid }}
+            </li>
+        </ol>
+        </div>
+
+<div class="container">
+        <h3>Add multiple choice answers to your new question</h3>
+        <form #choiceForm="ngForm" autocomplete="off">
+            <div class="form-group">
+            <input type="text" class="form-control" id="content" 
+                    required
+                    [(ngModel)]="choice.choice" name="choice"
+                    #form="ngModel">
+            <div [hidden]="form.valid || form.pristine" 
+                    class="alert alert-danger">
+                    Please fill in the content of the choice before adding
+            </div>
+            <input type="checkbox" id="validity"
+                    [(ngModel)]="choice.valid" name="valid"><label>Check if correct answer</label>
+            </div>
+    
+            <button id="submitbutton" type="button" class="btn btn-success" (click)="save(); choiceForm.reset()" [disabled]="!choiceForm.form.valid">Add</button>
+    
+        </form>
+</div>

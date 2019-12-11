@@ -1,0 +1,9 @@
+source https://api.nuget.org/v3/index.json
+
+framework: auto-detect
+nuget FSharp.Core
+
+group Build
+source https://www.nuget.org/api/v2
+
+nuget FAKE
